@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BurnHop</title>
+    <link rel="icon" href="../images/icon.png">
+    <!--javascript-->
+    <script src="cadastro.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/a4ed003e1a.js" crossorigin="anonymous"></script>
+		<!-- Website Font style -->
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="cadastro.css">
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+         <!-- Bootstrap início -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap fim -->
+
+
+    <link href="cadastro.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <div class = "text-center mt-4">
+      <img class="img-fluid" src="../images/logo.png" id = "logo"></img>
+    </div>
+    	<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Cadastre-se para ter acesso a todos os nossos conteúdos</h5>
+					<form class="" method="post" action="#">
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Nome</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Digite seu nome"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input id="email" onblur="validaEmail(email)" maxlength="60" size='65' type="text" class="form-control" name="email"  placeholder="Digite seu email"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Data Nascimento</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input type="date" class="form-control data" name="date" id="date"  placeholder="Digite sua data de nascimento"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Senha</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Digite sua senha"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirme a senha</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirme a sua senha"/>
+								</div>
+							</div>
+						</div>
+
+            <div id="formFooter">
+              <input onclick="registerUser()" type="button" class="fadeIn fourth" value="Cadastrar" id="buttomcadastro">
+            </div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>

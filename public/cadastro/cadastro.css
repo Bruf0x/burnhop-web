@@ -1,0 +1,178 @@
+body{
+  background-color:#565050;
+}
+
+#logo {
+  width: 40%;
+}
+
+body, html{
+  height: 100vh;
+  font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+.main{
+ 	margin:50px 15px;
+}
+
+h1.title {
+	font-size: 50px;
+	font-weight: 400;
+}
+
+hr{
+	width: 10%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 15px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+ 	background-color: #fff;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+
+}
+.form-control {
+  height: auto!important;
+  padding: 8px 12px !important;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+}
+.input-group {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+}
+.input-group-addon{
+  -webkit-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+  width: 40px;
+  text-align: center;
+  padding: 5% 4%;
+}
+
+
+#button {
+  border: 1px solid #ccc;
+  margin-top: 28px;
+  padding: 6px 12px;
+  color: #666;
+  text-shadow: 0 1px #fff;
+  cursor: pointer;
+  -moz-border-radius: 3px 3px;
+  -webkit-border-radius: 3px 3px;
+  border-radius: 3px 3px;
+  -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+}
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 400px;
+  padding: 10px 40px;
+	background:#322A2A;
+  color: #FFF;
+  text-shadow: none;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+span.input-group-addon i {
+  color: #322A2A;
+  font-size: 17px;
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+
+#formFooter {
+  background-color: #322A2A;
+  border-top: 1px solid #5a4e4e;
+  padding: 10px;
+  text-align: center;
+  -webkit-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #DF9F45;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 #5a4e4e;
+  box-shadow: 0 10px 30px 0 #5a4e4e;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+  margin: 5px 20px 15px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #d65128;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
