@@ -10,8 +10,8 @@ body{
 
 .userProfile{
     background-color: darkblue;
-    top: 80;
-    width: 330px;
+    top: 8%;
+    width: 25%;
     height: 600px;
     float: left;
 
@@ -19,7 +19,7 @@ body{
 
 .postContent{
     background-color:orange;
-    width: 690px;
+    width: 50%;
     height: 300px;
     float: left;
 
@@ -27,14 +27,14 @@ body{
 
 .feed{
     background-color: darkred;
-    width: 690px;
+    width: 50%;
     height: 1000px;
     float: left;
 }
 
 .ads{
     background-color: violet;
-    width: 330px;
+    width: 25%;
     height: 1500px;
     float:right; 
     float: 

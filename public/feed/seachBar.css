@@ -63,10 +63,3 @@ label {
   overflow: hidden;
 }
 
-.searchBar{
-    align-content: center;
-    position: relative; 
-    left: 50%;
-    bottom: 30px;
-  
-}
