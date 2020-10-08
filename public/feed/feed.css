@@ -1,14 +1,43 @@
+*{
+    border: 0%;
+    margin: 0%;
+    padding: 0%;
+  }
 body{
-  background-color:#565050;
+    background-color:#565050;
+    height: 4000px;
 }
 
-#logo {
-  width: 40%;
-  height: 40%;
+.userProfile{
+    background-color: darkblue;
+    top: 80;
+    width: 330px;
+    height: 600px;
+    float: left;
+
 }
 
-h1{
-  font-family: Comic Sans MS, cursive, sans-serif;
-  font-size: 100px;
-  color: black;
+.postContent{
+    background-color:orange;
+    width: 690px;
+    height: 300px;
+    float: left;
+
+}
+
+.feed{
+    background-color: darkred;
+    width: 690px;
+    height: 1000px;
+    float: left;
+}
+
+.ads{
+    background-color: violet;
+    width: 330px;
+    height: 1500px;
+    float:right; 
+    float: 
+
+
 }

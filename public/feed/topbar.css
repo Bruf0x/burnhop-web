@@ -1,0 +1,52 @@
+*{
+  border: 0%;
+  margin: 0%;
+  padding: 0%;
+}
+body{
+  background-color:#565050;
+  height: 4000px;
+}
+.topBar{
+  background-color: #322A2A;
+  height: 80px;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  width: 100%;
+
+}
+
+.textoTopBar{
+  background-color: red;
+  position: relative;
+  width: 30%;
+}
+
+.logoTopBar{
+  position: absolute;
+  top: 5px;
+  width: 200px;
+  height: 60px;
+  left: 10px;
+}
+
+.nameUser{
+  position: absolute;
+  top:  30px;
+  right: 120px;
+  color: white;
+  font-size: 18px;
+
+}
+
+.avatarUser{
+  position: absolute;
+  right: 0%;
+  border-radius: 50%;
+  width: 110px;
+  height: 70px;
+  top: 1px;
+  margin: auto;
+  border: 3px solid #ff675b;
+}
