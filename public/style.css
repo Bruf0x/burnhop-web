@@ -1,5 +1,7 @@
 body{
   background-color:#565050;
+  font-family: Comic Sans MS, cursive, sans-serif !important;
+  height: 100vh;
 }
 
 #logo {
@@ -13,11 +15,6 @@ body{
 }
 
 /* BASIC */
-
-body {
-  font-family: Comic Sans MS, cursive, sans-serif;
-  height: 100vh;
-}
 
 a {
   color: #fff;
