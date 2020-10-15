@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!--Font Awesome-->
@@ -8,20 +10,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BurnHop</title>
-<<<<<<< HEAD
-  <script src="cadastro.js"></script>
-  <link href="style.css" rel="stylesheet" type="style/css"/>
-=======
-  <link href="topbar.css" rel="stylesheet" type="text/css" />
-  <link href="seachBar.css" rel="stylesheet" type="text/css" />
-  <link href="feed.css" rel="stylesheet" type="text/css" />
->>>>>>> 397b94089ba4d7ff97d1b0829273ea8fb88d98b7
+
+  <script src="feed.js"></script>
+
+
 </head>
 <body class="bg-secondary">
   <!---area da top bar e search bar-->
   <nav class="navbar navbar-expand-sm navbar-light bg-dark">
       <a href="#" class="navbar-brand">
-        <img src="../images/logo.png" width="142px" >
+        <img src="../images/logo.png" width="142px">
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
         <span class="navbar-toggler-icon"></span>
@@ -50,22 +48,76 @@
   </nav>
   <!---Area de postagem de conteudos-->
   <section>
-    <div class="" id="home">
+    <div class="">
       <div class = "container-fluid">
         <div class="row">
-          <div class ="col-md-3" style="background-color:red;">
-            TESTE
+          <div class ="col-md-3">
           </div>
-          <div class ="col-md-6 verde" style="background-color: blue;">
-            Teste
+
+          <div class ="col-md-6 verde">
+            <div class="container d-flex justify-content-center mt-4 publicacao bg-dark">
+              <div id="page-wrapper">
+                <ul id="messages"></ul>
+                  <form id="message-form" action="#" method="post">
+                  <textarea id="message" placeholder="Escreva algo sobre Hip-Hop..." required></textarea>
+                  <button type="submit" class ="btn btn-secondary btn-icon"><i class="fas fa-camera"></i></button>
+                  <button type="submit" class ="btn btn-secondary">Publicar</button>
+                  </form>
+              </div>
+            </div>
           </div>
-          <div class ="col-md-3 "style="background-color: green;">
-            TESTE
+
+          <div class ="col-md-3">
           </div>
         </div>
 
-      </div>
+        <div class="row">
+          <div class ="col-md-3">
+          </div>
 
+          <div class ="col-md-6">
+            <div class="container mt-3 publicacao bg-dark">
+              <div class="row">
+                <div class="col-md-1 ml-3 mr-1 mt-3 mb-3">
+                  <img src= "../images/avatar.png" class = "rounded-circle " width="50px">
+                </div>
+                <div class="col-md-6 mt-3 d-flex align-items-center text-white">
+                  <ul class="info">
+                    <li class="nome">Nome Legal</li>
+                    <li class="data">14/05/2020</li>
+                  </ul>
+
+                </div>
+                <div class="col-md-5"></div>
+              </div> <!--fim da row !-->
+
+              <div class="row mt-1">
+                <div class="col-md-1"></div>
+                <div class="d-flex justify-content-center col-md-10 mb-4">
+                  <div class="conteudo text-white">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum diam eu augue congue convallis.
+                      Suspendisse vitae massa turpis. In volutpat ultrices dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                      Cras lobortis ultrices velit dictum lacinia. In porta velit porttitor purus pharetra, ut aliquet ipsum finibus.
+                      Mauris tincidunt eros a sem tristique varius.</p>
+                    <img src="../images/feed.jpg" class="img-fluid imagem"alt="">
+
+                  </div>
+
+                </div>
+              <div class="col-md-1"></div>
+              </div><!--fim da row !-->
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class ="col-md-3"></div>
+        </div>
+
+      </div>
+</div>
   </section>
 
 <!--Area do rodapé-->
