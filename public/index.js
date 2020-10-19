@@ -3,7 +3,7 @@ function userLogin(){
     let senha = document.getElementById('password').value
 
     let http = new XMLHttpRequest()
-    let url = 'http://localhost:9000/users/login'
+    let url = 'https://burnhop-backend.herokuapp.com:9000/users/login'
     http.open('POST', url, true)
     http.setRequestHeader('Access-Control-Allow-Origin', '*')
     http.setRequestHeader('email', login)

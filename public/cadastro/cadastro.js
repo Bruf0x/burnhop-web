@@ -16,7 +16,7 @@ function registerUser(){
 
 function Cadastro(nome, email, data, senha){
   let http = new XMLHttpRequest()
-  let url = 'http://localhost:9000/users/'
+  let url = 'https://burnhop-backend.herokuapp.com:9000/users/'
   let dados = {
     "name": nome,
     "username": nome,
