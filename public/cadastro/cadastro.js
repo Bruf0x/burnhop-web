@@ -16,7 +16,7 @@ function registerUser(){
 
 function Cadastro(nome, email, data, senha){
   let http = new XMLHttpRequest()
-  let url = 'https://burnhop-backend.herokuapp.com:9000/users/'
+  let url = 'https://burnhop-backend.herokuapp.com/users/'
   let dados = {
     "name": nome,
     "username": nome,
@@ -40,7 +40,8 @@ function Cadastro(nome, email, data, senha){
       alert("Erro ao cadastrar, por favor verifique seus dados!")
     }
   }
-  http.send(dados);
+  
+  http.send(JSON.stringify(dados));
 }
 
 
