@@ -1,3 +1,6 @@
+import login from "../index.js";
+
+console.log(login);
 
 const nome = document.getElementById('nome')
 const temp = 'Gato Agiota'

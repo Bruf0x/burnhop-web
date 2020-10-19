@@ -21,4 +21,7 @@ function userLogin(){
     }
     console.log(login,senha)
     http.send();
+
+    export {login};
 }
+
