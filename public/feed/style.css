@@ -49,7 +49,10 @@ body, *{
   color: red;
 }
 
-
+.foto{
+  width: 60px;
+  height: 50px;
+}
 
 
 ul li span {
