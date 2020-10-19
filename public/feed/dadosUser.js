@@ -1,17 +1,16 @@
-import login from "../index.js";
-
+var login = localStorage.getItem("login");
 console.log(login);
 
-const nome = document.getElementById('nome')
-const temp = 'Gato Agiota'
 
-
-const exibirNome = (temp)=>{
-
-  console.log(temp)
-  const htmlNome = `${temp}`
-  nome.innerHTML = htmlNome
+function exibirNome(userName){
+  const htmlNome = `${userName}`
+  nome.innerHTML = htmlNome  
 };
+
+$.get(`https://burnhop-backend.herokuapp.com/users/${login}`,function(data){
+  console.log(data);
+  exibirNome(data.name);
+},'json');
 
 
 var img = document.createElement("img");
@@ -27,4 +26,3 @@ const exibirFoto = (foto)=>{
 };
 
 exibirFoto(foto);
-exibirNome(temp);

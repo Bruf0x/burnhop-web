@@ -1,7 +1,5 @@
-let login;
-
 function userLogin(){
-    login = document.getElementById('login').value
+    let login = document.getElementById('login').value
     let senha = document.getElementById('password').value
 
     let http = new XMLHttpRequest()
@@ -14,6 +12,7 @@ function userLogin(){
       console.log(http.responseText)
       console.log(http.readyState)
       console.log(http.status)
+      localStorage.setItem("login", login);
       if(http.readyState == 4 && http.status == 200) {
         window.location = "/static/feed/feed.html";
       }
@@ -25,6 +24,4 @@ function userLogin(){
     http.send();
 
 }
-
-export {login};
 
