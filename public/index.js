@@ -1,5 +1,7 @@
+let login;
+
 function userLogin(){
-    let login = document.getElementById('login').value
+    login = document.getElementById('login').value
     let senha = document.getElementById('password').value
 
     let http = new XMLHttpRequest()
@@ -22,6 +24,7 @@ function userLogin(){
     console.log(login,senha)
     http.send();
 
-    export var email = login;
 }
+
+export {login};
 
