@@ -25,6 +25,7 @@ function postar(mensagem, email){
         console.log(http.responseText)
         if(http.readyState == 4 && http.status == 200) {
         alert("Conteúdo postado com sucesso");
+        document.location.reload(true);
         }
         else{
         alert("Erro ao postar conteudo")

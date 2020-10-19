@@ -4,7 +4,7 @@ var theUrl = "https://burnhop-backend.herokuapp.com/posts/get-all"
 
 var data = $.get(theUrl,function(data){
   console.log(data);
-  Promise.all(data).then((results) => {
+  Promise.all(data.reverse()).then((results) => {
     const publicacoes = results.map((result) => ({
         name: result.users.name,
         data: result.posted_on.split("T")[0],
