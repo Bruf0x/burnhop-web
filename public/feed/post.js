@@ -34,3 +34,6 @@ function postar(mensagem, email){
 
 http.send(JSON.stringify(dados));
 }
+
+var vid = document.getElementById("myAudio");
+vid.volume = 0.5;
