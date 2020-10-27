@@ -3,12 +3,13 @@ body{
 }
 
 #logo {
-  width: 40%;
+  width: 30%;
 }
 
 body, html{
   height: 100vh;
-  font-family: Comic Sans MS, cursive, sans-serif;
+  font-family: Comic Sans MS, Comic Sans, cursive !important;
+  line-height: normal;
 }
 
 .main{

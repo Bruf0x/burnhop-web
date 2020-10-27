@@ -1,47 +1,103 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BurnHop</title>
-    <link rel="icon" href="../images/icon.png">
-    <!--javascript-->
-    <script src="cadastro.js"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/a4ed003e1a.js" crossorigin="anonymous"></script>
-		<!-- Website Font style -->
-	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="cadastro.css">
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-         <!-- Bootstrap início -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap fim -->
-    <link href="feed.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div class = "text-center mt-4">
-      <img class="img-fluid" src="../images/logo.png" id = "logo"></img>
-    </div>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/a4ed003e1a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BurnHop</title>
 
-    <div class="text-center mt-4">
-      <h1>Em Construção</h1>
-    </div>
+  <script src="feed.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
-    <div class="text-center mt-4">
-      <img src="../images/construcao.gif" />
-    </div>
 
-		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</head>
+<body class="bg-secondary">
+  <!---area da top bar e search bar-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <a href="#" class="navbar-brand">
+        <img src="../images/logo.png" width="142px">
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="nav-principal">
+      <form class= "mr-auto ml-auto mt-1 mb-1">
+        <div class=" input-group input-group-lg">
+          <input type="text" placeholder="Pesquisar..." class="form-control">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-light"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+      </form>
+        <ul class="navbar-nav">
+          <li class="nav-item d-flex">
+            <a href="#" class="nav-link text-light" id = "nome"></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link d-online ml-3" id ="foto"></a>
+          </li>
+       </ul>
+      </div>
+  </nav>
+  <!---Area de postagem de conteudos-->
+  <section>
+    <div class="">
+      <div class = "container-fluid">
+        <div class="row">
+          <div class ="col-md-3">
+          </div>
+
+          <div class ="col-md-6 verde">
+            <div class="container d-flex justify-content-center mt-4 publicacao bg-dark">
+              <div id="page-wrapper">
+                <ul id="messages"></ul>
+                  <form id="message-form" action="#" method="post">
+                  <textarea id="message" placeholder="Escreva algo sobre Hip-Hop..." required></textarea>
+                  <button type="button" class ="btn btn-secondary btn-icon"><i class="fas fa-camera"></i></button>
+                  <button onclick="postarConteudo()"  type="button" class ="btn btn-secondary" id="publicar">Publicar</button>
+                  </form>
+              </div>
+            </div>
+          </div>
+
+          <div class ="col-md-3">
+            <iframe class="spotify" id="myAudio" src="https://open.spotify.com/embed/playlist/5TZkls9cEOzWDR6qCxwDot" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+        </div>
+        <div class="postagem feed" id="posts">
+          
+
+        </div>
+
+
+          <div class ="col-md-3">
+            
+          </div>
+        </div>
+
+      </div>
+</div>
+  </section>
+
+<!--Area do rodapé-->
+<footer>
+</footer>
+<!--JS-->
+
+<script src="../index.js"></script>
+<script src="dadosUser.js"></script>
+<script src="post.js"></script>
+<script src="renderposts.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>

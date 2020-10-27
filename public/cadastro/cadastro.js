@@ -16,10 +16,19 @@ function registerUser(){
 
 function Cadastro(nome, email, data, senha){
   let http = new XMLHttpRequest()
-  let url = 'http://localhost:9000/users/'
-  let dados = `name= ${nome}&username=${nome}&email=${email}&data_nasc=${data}&pwd=${senha}`
+  let url = 'https://burnhop-backend.herokuapp.com/users/'
+  let dados = {
+    "name": nome,
+    "username": nome,
+    "data_nasc":data,
+    "login":{
+      "email": email,
+      "password": senha
+    }
+  }
+
   http.open('POST', url, true)
-  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+  http.setRequestHeader('Content-type', 'application/json')
   http.setRequestHeader('Access-Control-Allow-Origin', '*')
   http.onload = function(){
     console.log(http.responseText)
@@ -31,7 +40,8 @@ function Cadastro(nome, email, data, senha){
       alert("Erro ao cadastrar, por favor verifique seus dados!")
     }
   }
-  http.send(dados);
+  
+  http.send(JSON.stringify(dados));
 }
 
 

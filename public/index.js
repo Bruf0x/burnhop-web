@@ -3,7 +3,7 @@ function userLogin(){
     let senha = document.getElementById('password').value
 
     let http = new XMLHttpRequest()
-    let url = 'http://localhost:9000/users/login'
+    let url = 'https://burnhop-backend.herokuapp.com/users/login'
     http.open('POST', url, true)
     http.setRequestHeader('Access-Control-Allow-Origin', '*')
     http.setRequestHeader('email', login)
@@ -12,6 +12,7 @@ function userLogin(){
       console.log(http.responseText)
       console.log(http.readyState)
       console.log(http.status)
+      localStorage.setItem("login", login);
       if(http.readyState == 4 && http.status == 200) {
         window.location = "/static/feed/feed.html";
       }
@@ -19,7 +20,8 @@ function userLogin(){
         alert("Usuário ou senha incorreto!")
       }
     }
+    console.log(login,senha)
     http.send();
-}
 
+}
 
