@@ -6,9 +6,9 @@ var data = $.get(theUrl,function(data){
   console.log(data);
   Promise.all(data.reverse()).then((results) => {
     const publicacoes = results.map((result) => ({
-        name: result.users.name,
-        data: result.posted_on.split("T")[0],
-        texto: result.content.text
+        name: result.username,
+        data: result.dataPost.split("T")[0],
+        texto: result.texto
     }));
     console.log(publicacoes)
     exibirPublicacoes(publicacoes);
@@ -21,7 +21,7 @@ const exibirPublicacoes = (publicacoes) => {
     console.log(publicacoes);
     const postHTMLString = publicacoes
         .map(
-            (post) => 
+            (post) =>
      `
     <div class="row">
     <div class ="col-md-3">
@@ -59,14 +59,9 @@ const exibirPublicacoes = (publicacoes) => {
 
       </div>
     </div>
-    
-    
+
+
     `)
     .join('');
     posts.innerHTML = postHTMLString;
 };
-
-
-
-
-
