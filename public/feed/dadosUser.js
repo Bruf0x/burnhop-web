@@ -1,10 +1,10 @@
-var login = localStorage.getItem("login");
-//console.log(login);
+
+var login = Cookies.get('login');
 
 
 function exibirNome(userName){
   const htmlNome = `${userName}`
-  nome.innerHTML = htmlNome  
+  nome.innerHTML = htmlNome
 };
 
 $.get(`https://burnhop-backend.herokuapp.com/users/${login}`,function(data){

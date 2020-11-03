@@ -1,4 +1,6 @@
 function userLogin(){
+
+
     let login = document.getElementById('login').value
     let senha = document.getElementById('password').value
 
@@ -12,7 +14,10 @@ function userLogin(){
       console.log(http.responseText)
       console.log(http.readyState)
       console.log(http.status)
-      localStorage.setItem("login", login);
+
+      Cookies.set('login', login,{ path: '', domain: 'localhost' });
+      console.log(Cookies.get('login'))
+
       if(http.readyState == 4 && http.status == 200) {
         window.location = "/static/feed/feed.html";
       }
@@ -24,4 +29,3 @@ function userLogin(){
     http.send();
 
 }
-
