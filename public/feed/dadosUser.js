@@ -1,5 +1,5 @@
-var login = localStorage.getItem("login");
-//console.log(login);
+
+var login = Cookies.get('login');
 
 
 function exibirNome(userName){
