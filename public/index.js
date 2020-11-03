@@ -15,7 +15,7 @@ function userLogin(){
       console.log(http.readyState)
       console.log(http.status)
 
-      Cookies.set('login', login,{ path: '', domain: 'localhost' });
+      Cookies.set('login', login,{ path: '', domain: 'burnhop.herokuapp.com' });
       console.log(Cookies.get('login'))
 
       if(http.readyState == 4 && http.status == 200) {
