@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="profileEdit.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/a4ed003e1a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BurnHop</title>
+  <link rel="icon" href="/static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+<body class="bg-secondary">
+  <!---area da top bar e search bar-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <a href="#" class="navbar-brand">
+      <a href="./static/feed/feed.html"><img src="../images/logo.png" width="142px"></a>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="nav-principal">
+      <form class= "mr-auto ml-auto mt-1 mb-1">
+        <div class=" input-group input-group-lg">
+          <input type="text" placeholder="Pesquisar..." class="form-control">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-light"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+      </form>
+        <ul class="navbar-nav">
+          <li class="nav-item d-flex">
+            <a href="#" class="nav-link text-light" id = "nome"></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="./static/profile.html" class="nav-link d-online ml-3" id ="foto"></a>
+          </li>
+       </ul>
+      </div>
+  </nav>
+
+<!--Perfil Usuário-->
+
+<div class="container mt-4">
+<div class="row flex-lg-nowrap">
+  <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+  </div>
+
+  <div class="col">
+    <div class="row">
+      <div class="col mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="e-profile">
+              <div class="row">
+                <div class="col-12 col-sm-auto mb-3">
+                  <div class="mx-auto" style="width: 140px;">
+                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px;">
+                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;"><img class="img-fluid" src="../images/discoteca.png"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                  <div class="text-center text-sm-left mb-2 mb-sm-0">
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4> <!--RECUPERAR NOME DO USUÁRIO AQUI -->
+                    <p class="mb-0">email@exemplo.com</p> <!--RECUPERAR EMAIL DO USUÁRIO AQUI -->
+                    <div class="text-muted"><small>14/01/2020</small></div>
+                    <div class="mt-2">
+                    </div>
+                  </div>
+                  <div class="text-center text-sm-right">
+                    <span><button type="button" data-toggle="modal" data-target="#editar" class="btn btn-dark"name="button">Editar perfil</button></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="px-xl-3">
+              <button class="btn btn-block btn-dark">
+                <i class="fa fa-sign-out"></i>
+                <span>Logout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--Posts usuário-->
+      <div class="" id="posts">
+
+      </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class=" modal-dialog modal-dialog-centered" role="document">
+      <div class=" bg-sobre modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Editar Perfil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-justify lead">
+
+
+              <div class="col">
+                <div class="row">
+                  <div class="col mb-3">
+                    <div class="card ">
+                      <div class="card-body">
+                        <div class="e-profile">
+                          <div class="row">
+                            <div class="col-12 col-sm-auto mb-3">
+                              <div class="mx-auto" style="width: 140px;">
+                                <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                  <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                              <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4> <!--RECUPERAR NOME DO USER AQUI-->
+                                <div class="mt-2">
+                                  <button class="btn btn-dark" type="button">
+                                    <i class="fa fa-fw fa-camera"></i>
+                                    <span>Alterar Foto</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="text-center text-sm-right">
+                                <span class="badge badge-secondary">Usuário</span>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="nav nav-tabs">
+                            <li class="nav-item"><a href="" class="active nav-link">Dados</a></li>
+                          </ul>
+                          <div class="tab-content pt-3">
+                            <div class="tab-pane active">
+                              <form class="form" novalidate="">
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group">
+                                          <label>Nome Completo</label>
+                                          <input class="form-control" type="text" name="name" placeholder="John Smith" value="Seu nome aqui"> <!--RECUPERAR NOME DO USER AQUI-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group">
+                                          <label>Email</label>
+                                          <input class="form-control" type="text" placeholder="user@exemplo.com"><!--RECUPERAR EMAIL DO USER AQUI-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group">
+                                          <label>Data de Nascimento</label>
+                                          <input class="form-control" type="date" name="name" placeholder="John Smith" value=""> <!--RECUPERAR DATA DO USER AQUI-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col mb-3">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-12 col-sm-6 mb-3">
+                                    <div class="mb-2"><b>Alterar senha</b></div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group">
+                                          <label>Senha atual</label>
+                                          <input class="form-control" type="password" placeholder="••••••">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group">
+                                          <label>Nova senha</label>
+                                          <input class="form-control" type="password" placeholder="••••••">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="form-group">
+                                          <label>Confirma nova senha <span class="d-none d-xl-inline"></span></label>
+                                          <input class="form-control" type="password" placeholder="••••••"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col d-flex justify-content-end">
+                                    <button class="btn btn-dark" type="submit">Salvar Alterações</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Area do rodapé-->
+<footer>
+</footer>
+<!--JS-->
+<script src="./renderPostsProfile.js"></script>
+<script src="../index.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
