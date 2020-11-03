@@ -1,4 +1,4 @@
-var login = localStorage.getItem("login");
+/*var login = localStorage.getItem("login");
 //console.log(login);
 
 
@@ -25,4 +25,4 @@ const exibirFoto = (foto)=>{
   fotoElement.appendChild(img)
 };
 
-exibirFoto(foto);
+exibirFoto(foto);*/
