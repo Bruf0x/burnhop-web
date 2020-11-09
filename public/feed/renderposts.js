@@ -3,14 +3,14 @@ const posts = document.getElementById('posts');
 var theUrl = "https://burnhop-backend.herokuapp.com/posts/get-all"
 
 var data = $.get(theUrl,function(data){
-  console.log(data);
+  //console.log(data);
   Promise.all(data.reverse()).then((results) => {
     const publicacoes = results.map((result) => ({
         name: result.username,
         data: result.dataPost.split("T")[0],
         texto: result.texto
     }));
-    console.log(publicacoes)
+    //console.log(publicacoes)
     exibirPublicacoes(publicacoes);
 });
 
@@ -18,7 +18,7 @@ var data = $.get(theUrl,function(data){
 
 
 const exibirPublicacoes = (publicacoes) => {
-    console.log(publicacoes);
+    //console.log(publicacoes);
     const postHTMLString = publicacoes
         .map(
             (post) =>
