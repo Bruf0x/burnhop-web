@@ -6,7 +6,7 @@ AWS.config.update({
   region: bucketRegion
   ,
   credentials: new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: IdentityPoolId 
+    IdentityPoolId: IdentityPoolId
   })
 });
 
@@ -14,7 +14,7 @@ AWS.config.update({
 var s3 = new AWS.S3({
   apiVersion: "2006-03-01",
   params: { Bucket: albumBucketName }
-}); 
+});
 
 function uploadImage(){
   var fileupload = document.getElementById("FileUpload1");
@@ -72,9 +72,6 @@ function postImage(){
 }
 
 
-
-
-
 var login = Cookies.get('login');
 
 var theUrl = "https://burnhop-backend-dev.herokuapp.com/users/email"
@@ -82,5 +79,3 @@ var theUrl = "https://burnhop-backend-dev.herokuapp.com/users/email"
 $.get(`https://burnhop-backend-dev.herokuapp.com/users/email/${login}`,function(data){
   console.log(data);
 },'json');
-
-
