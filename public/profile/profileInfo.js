@@ -16,7 +16,7 @@ function exibirData(userData){
 };
 
 
-$.get(`https://burnhop-backend.herokuapp.com/users/${login}`,function(data){
+$.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
   exibirNome(data.name);
   exibirEmail(data.login.email);
   exibirData(data.data_nasc);
@@ -29,3 +29,25 @@ $.get(`https://burnhop-backend.herokuapp.com/users/${login}`,function(data){
 function logout(){
     window.location = "/"
 }
+
+
+$.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
+    Cookies.set('image', data.image_path,{ path: '', domain: 'localhost' });
+
+},'json');
+
+
+
+var img = document.createElement("img");
+img.src = Cookies.get('image');
+img.className = "rounded-circle foto"
+const fotoElement = document.getElementById('foto')
+
+const exibirFoto = (foto)=>{
+
+  //console.log(foto)
+  const htmlFoto = `<img href= ${foto}>`
+  fotoElement.appendChild(img)
+};
+
+exibirFoto(foto);

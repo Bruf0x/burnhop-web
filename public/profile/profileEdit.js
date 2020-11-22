@@ -25,7 +25,7 @@ function uploadImage(){
   };
   fileupload.onchange = function () {
       var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
-      console.log(fileName);
+      //console.log(fileName);
       filePath.innerHTML = "<b>Selected File: </b>" + fileName;
   };
 }
@@ -62,6 +62,7 @@ function postImage(){
   promise.then(
     function() {
       alert("Successfully uploaded photo.");
+      postarImagem(fileName)
       //enviarBack(fileName)
     },
     function(err) {
@@ -74,8 +75,28 @@ function postImage(){
 
 var login = Cookies.get('login');
 
-var theUrl = "https://burnhop-backend-dev.herokuapp.com/users/email"
+var theUrl = "https://burnhop-backend.herokuapp.com/users/email"
 
-$.get(`https://burnhop-backend-dev.herokuapp.com/users/email/${login}`,function(data){
-  console.log(data);
-},'json');
+
+
+function postarImagem(fileName){
+    var id = Cookies.get('id')
+    //var id = 21
+    var img = "https://burnhopimg.s3.amazonaws.com/users-img/"+fileName
+    console.log(img)
+    let http = new XMLHttpRequest()
+    let url = `https://burnhop-backend.herokuapp.com/users/image?id=${id}&imagePath=${img}`
+  
+    http.open('PUT', url, true)
+    http.setRequestHeader('Access-Control-Allow-Origin', '*')
+    http.onload = function(){
+      console.log(http.responseText)
+      if(http.readyState == 4 && http.status == 200) {
+        console.log("Sucesso ao enviar imagem")
+      }
+      else{
+        console.log("Erro ao enviar imagem")
+      }
+    }  
+    http.send();
+};

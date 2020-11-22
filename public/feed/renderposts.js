@@ -2,13 +2,15 @@ const posts = document.getElementById('posts');
 
 var theUrl = "https://burnhop-backend.herokuapp.com/posts/get-all"
 
+
 var data = $.get(theUrl,function(data){
-  //console.log(data);
+  console.log(data);
   Promise.all(data.reverse()).then((results) => {
     const publicacoes = results.map((result) => ({
         name: result.username,
         data: result.dataPost.split("T")[0],
-        texto: result.texto
+        texto: result.texto,
+        foto: result.image_path
     }));
     //console.log(publicacoes)
     exibirPublicacoes(publicacoes);
