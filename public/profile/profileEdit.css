@@ -86,6 +86,7 @@ textarea {
   margin-bottom: 1rem;
 }
 
+/*
 button {
   float: right;
   border-radius: 3px;
@@ -98,7 +99,7 @@ button {
   text-align: center;
   background: #BABABA;
   border-bottom: 1px solid #999;
-}
+}*/
 .btn-icon{
     float: left;
 }

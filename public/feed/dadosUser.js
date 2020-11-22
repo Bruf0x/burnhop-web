@@ -13,7 +13,7 @@ $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data
 },'json');
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('id', data.id,{ path: '', domain: 'localhost' });
+    Cookies.set('id', data.id,{ domain: 'localhost' });
 
 },'json');
 
