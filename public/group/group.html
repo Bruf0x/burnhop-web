@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BurnHop</title>
   <link rel="icon" href="/static/images/icon.png">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.390.0.js"></script>
@@ -26,7 +27,7 @@
   <!---area da top bar e search bar-->
   <nav class="navbar navbar-expand-sm navbar-light bg-dark">
       <a href="#" class="navbar-brand">
-      <a href="./static/feed/feed.html"><img src="../images/logo.png" width="142px"></a>
+      <a href="../feed/feed.html"><img src="../images/logo.png" width="142px"></a>
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
         <span class="navbar-toggler-icon"></span>
@@ -72,12 +73,13 @@
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap" id="nome">TESTE NOME GRUPO</h4> <!--RECUPERAR NOME DO Grupo AQUI -->
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap" id="nome"></h4> <!--RECUPERAR NOME DO Grupo AQUI -->
                     <div class="mt-2">
                     </div>
                   </div>
-                  <div class="text-center text-sm-right">
-                    <span><button type="button" data-toggle="modal" data-target="#grupos" class="btn btn-dark"name="button">Editar Grupo</button></span>
+                  <div class="text-center text-sm-right" id=editarGrupo>
+                    <!--Editar grupo se user for admin-->
+                    <span><button type='button' class='btn btn-dark mt-2'name='button'>Entrar no grupo</button></span>
                   </div>
                 </div>
               </div>
@@ -133,6 +135,9 @@
           <label>Nome do Grupo</label>
           <input class="form-control" type="text" name="nomeGrupo" placeholder="Nome do grupo aqui" id="nomeGrupo" >
           <button type="button" class="btn btn-success mt-4"name="button">Salvar</button>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-danger mt-4 mr-auto"name="button">Deletar Grupo</button>
+          </div>
         </div>
       </div>
     </div>
@@ -150,12 +155,8 @@
 <footer>
 </footer>
 <!--JS-->
-<script src="./renderPostsProfile.js"></script>
-<script src="../index.js"></script>
+<script src="group.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-<script src="./profileInfo.js" ></script>
-<script src="./profileEdit.js" ></script>
-<script src="./profileEditInfo.js" ></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
