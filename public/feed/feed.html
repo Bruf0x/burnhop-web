@@ -26,7 +26,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-  
+
 
     <div class="collapse navbar-collapse justify-content-end" id="nav-principal">
       <form class= "mr-auto ml-auto mt-1 mb-1">
@@ -55,6 +55,12 @@
       <div class = "container-fluid">
         <div class="row">
           <div class ="col-md-3">
+            <div class=" d-flex justify-content-center mt-4 publicacao bg-dark">
+              <ul class="info">
+                <li><h3 class="mt-2 ml-3 text-white">Grupos</h3></li>
+                <li><button type="button" data-toggle="modal" data-target="#grupos" class=" mt-2 btn btn-secondary">Crie seu Grupo</button></li>
+              </ul>
+            </div>
           </div>
 
           <div class ="col-md-6 verde">
@@ -63,7 +69,6 @@
                 <ul id="messages"></ul>
                   <form id="message-form" action="#" method="post">
                   <textarea id="message" placeholder="Escreva algo sobre Hip-Hop..." required></textarea>
-                  <button type="button" class ="btn btn-secondary btn-icon"><i class="fas fa-camera"></i></button>
                   <button onclick="postarConteudo()"  type="button" class ="btn btn-secondary" id="publicar">Publicar</button>
                   </form>
               </div>
@@ -115,6 +120,28 @@
       </div>
 </div>
   </section>
+
+<!--Modal-->
+<div class="modal fade" id="grupos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class=" modal-dialog modal-dialog-centered" role="document">
+    <div class=" bg-sobre modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Criando seu grupo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="modal-body text-justify lead">
+        <div class="form-group">
+          <label>Nome do Grupo</label>
+          <input class="form-control" type="text" name="nomeGrupo" placeholder="Nome do grupo aqui" id="nomeGrupo" >
+          <button type="button" class="btn btn-success mt-4"name="button">Criar Grupo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!--Area do rodapé-->
 <footer>
