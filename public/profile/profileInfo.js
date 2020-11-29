@@ -25,8 +25,13 @@ $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data
   console.log(data.data_nasc);
 },'json');
 
+setTimeout(function(){
+    console.log("Ready")
+}, 1000);
+
 /*Logout*/
 function logout(){
+    setTimeout(1000)
     window.location = "/"
 }
 

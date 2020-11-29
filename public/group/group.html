@@ -69,17 +69,14 @@
           <div class="card-body">
             <div class="e-profile">
               <div class="row">
-                <div class="col-12 col-sm-auto mb-3">
-                </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap" id="nome"></h4> <!--RECUPERAR NOME DO Grupo AQUI -->
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap " id="nome"></h4> <!--RECUPERAR NOME DO Grupo AQUI -->
                     <div class="mt-2">
                     </div>
                   </div>
                   <div class="text-center text-sm-right" id=editarGrupo>
                     <!--Editar grupo se user for admin-->
-                    <span><button type='button' class='btn btn-dark mt-2'name='button'>Entrar no grupo</button></span>
                   </div>
                 </div>
               </div>
@@ -134,9 +131,9 @@
         <div class="form-group">
           <label>Nome do Grupo</label>
           <input class="form-control" type="text" name="nomeGrupo" placeholder="Nome do grupo aqui" id="nomeGrupo" >
-          <button type="button" class="btn btn-success mt-4"name="button">Salvar</button>
+          <button type="button" onclick="editarNomeGrupo()"class="btn btn-success mt-4"name="button">Salvar</button>
           <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-danger mt-4 mr-auto"name="button">Deletar Grupo</button>
+            <button type="button" onclick="deletarGrupo()" class="btn btn-danger mt-4 mr-auto"name="button">Deletar Grupo</button>
           </div>
         </div>
       </div>
@@ -149,13 +146,13 @@
 
 
 
-
-
 <!--Area do rodapé-->
 <footer>
 </footer>
 <!--JS-->
 <script src="group.js"></script>
+<script src="groupPosts.js"></script>
+<script src="groupRenderPosts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

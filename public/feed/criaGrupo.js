@@ -2,6 +2,7 @@ var login = Cookies.get('login');
 
 function criarGrupo(){
   let nomeGrupo = document.getElementById('nomeGrupo').value
+  localStorage.setItem("nomeGrupo",nomeGrupo)
   let id = Cookies.get('id')
 
   let http = new XMLHttpRequest()
@@ -19,6 +20,7 @@ function criarGrupo(){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
+        setTimeout(1000)
         window.location = "../group/group.html"
       }
       else if(http.status == 409) {
@@ -31,3 +33,7 @@ function criarGrupo(){
     http.send(JSON.stringify(dados));
 
 }
+
+setTimeout(function(){
+    console.log("Ready")
+}, 1000);
