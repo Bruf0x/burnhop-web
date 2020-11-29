@@ -34,13 +34,14 @@ function Cadastro(nome, email, data, senha){
     console.log(http.responseText)
     if(http.readyState == 4 && http.status == 200) {
       alert("Cadastro realizado com sucesso!");
+      setTimeout(1000)
       window.location = ('/');
     }
     else{
       alert("Erro ao cadastrar, por favor verifique seus dados!")
     }
   }
-  
+
   http.send(JSON.stringify(dados));
 }
 
@@ -77,3 +78,7 @@ document.getElementById("email").innerHTML="<font color='red'>E-mail inválido <
 alert("E-mail invalido")
 }
 }
+
+setTimeout(function(){
+    console.log("Ready")
+}, 1000);

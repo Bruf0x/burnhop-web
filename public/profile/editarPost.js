@@ -1,5 +1,4 @@
 
-
 function editarPost(){
 
   $(document).on('click', '[data-tracker]', function() {
@@ -9,6 +8,7 @@ function editarPost(){
 
 });
 }
+
 
 function editarConteudoPost(){
   let http = new XMLHttpRequest()
