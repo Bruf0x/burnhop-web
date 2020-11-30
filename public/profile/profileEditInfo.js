@@ -36,7 +36,7 @@ function postarInfo(fileName){
         if(http.readyState == 4 && http.status == 200) {
           if(email != ""){  
             Cookies.remove('login')
-            Cookies.set('login', email,{domain: 'https://burnhop.herokuapp.com' });
+            Cookies.set('login', email,{domain: 'burnhop.herokuapp.com' });
           }
           console.log("sucesso!");
           setTimeout(2000)
@@ -51,7 +51,7 @@ function postarInfo(fileName){
 }
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('id', data.id,{ path: '', domain: 'https://burnhop.herokuapp.com' });
+    Cookies.set('id', data.id,{ path: '', domain: 'burnhop.herokuapp.com' });
 
 },'json');
 
