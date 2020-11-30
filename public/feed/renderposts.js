@@ -10,7 +10,7 @@ var data = $.get(theUrl,function(data){
         name: result.username,
         data: result.dataPost.split("T")[0],
         texto: result.texto,
-        foto: result.image_path
+        foto: result.imagePath
     }));
     //console.log(publicacoes)
     exibirPublicacoes(publicacoes);

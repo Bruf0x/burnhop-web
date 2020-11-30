@@ -12,18 +12,18 @@ function exibirEmail(userEmail){
 
 function exibirData(userData){
   const htmlData = `${userData}`
-  data_nasc.innerHTML = htmlData
+  dataNasc.innerHTML = htmlData
 };
 
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
   exibirNome(data.name);
   exibirEmail(data.login.email);
-  exibirData(data.data_nasc);
+  exibirData(data.dataNasc);
   localStorage.setItem('idProfileView', data.id);
   console.log(data.login.email);
   console.log(data.name);
-  console.log(data.data_nasc);
+  console.log(data.dataNasc);
 },'json');
 
 setTimeout(function(){
@@ -38,7 +38,7 @@ function logout(){
 
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('image', data.image_path,{ path: '', domain: 'localhost' });
+    Cookies.set('image', data.imagePath,{ path: '', domain: 'localhost' });
 
 },'json');
 

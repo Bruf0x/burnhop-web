@@ -1,6 +1,6 @@
 function postarConteudo(){
     let mensagem = document.getElementById('message').value
-    let email = localStorage.getItem("login");
+    var email = Cookies.get('login');
     if(mensagem != null){
         console.log(mensagem)
         postar(mensagem, email)
@@ -11,10 +11,12 @@ function postarConteudo(){
   
 function postar(mensagem, email){
     let http = new XMLHttpRequest()
+    var idGrupo = localStorage.getItem('idGrupo')
     let url = 'https://burnhop-backend.herokuapp.com/posts/'
     let dados = {
+        "groupId": idGrupo,
         "texto": mensagem,
-        "user_email": email
+        "userEmail": email
     }
     
 

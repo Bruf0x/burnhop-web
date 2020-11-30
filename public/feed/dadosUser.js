@@ -18,7 +18,7 @@ $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data
 },'json');
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('image', data.image_path,{ path: '', domain: 'localhost' });
+    Cookies.set('image', data.imagePath,{ path: '', domain: 'localhost' });
 
 },'json');
 

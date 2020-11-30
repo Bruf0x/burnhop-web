@@ -51,7 +51,7 @@ const exibirPublicacoes = (publicacoes) => {
           <div class="col-md-1"></div>
           <div class="d-flex justify-content-center col-md-10 mb-4">
             <div class="conteudo text-white">
-              <p>${post.texto}</p>
+              <p id="${post.id}" >${post.texto}</p>
               <!--<img src="../images/feed.jpg" class="img-fluid imagem"alt=""> -->
             </div>
 

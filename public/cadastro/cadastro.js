@@ -20,7 +20,7 @@ function Cadastro(nome, email, data, senha){
   let dados = {
     "name": nome,
     "username": nome,
-    "data_nasc":data,
+    "dataNasc":data,
     "login":{
       "email": email,
       "password": senha

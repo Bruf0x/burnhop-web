@@ -17,7 +17,7 @@ searchBar.addEventListener('keyup', (e) => {
     const filteredCharacters = hpCharacters.filter((character) => {
         return (
             character.name.toLowerCase().includes(searchString) ||
-            character.data_nasc.toLowerCase().includes(searchString) ||
+            character.dataNasc.toLowerCase().includes(searchString) ||
             character.login.email.toLowerCase().includes(searchString)
         );
     });
@@ -40,8 +40,8 @@ const displayCharacters = (characters) => {
             return `
             <li class="character">
                 <h2><a onClick ="saveProfileEmail()" data-tracker="${character.login.email}" href= "../search/profileView.html">${character.name}</a></h2>
-                <p class = "mt-2">Data Nascimento: ${character.data_nasc}</p>
-                <img src="${character.image_path}"></img>
+                <p class = "mt-2">Data Nascimento: ${character.dataNasc}</p>
+                <img src="${character.imagePath}"></img>
             </li>
         `;
         })

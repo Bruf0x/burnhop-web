@@ -1,4 +1,3 @@
-
 function editarPost(){
 
   $(document).on('click', '[data-tracker]', function() {
@@ -28,7 +27,7 @@ function editarConteudoPost(){
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
         alert("Post atualizado com sucesso")
-        location.reload()
+        $(`#${idPost}`).html(conteudo)
       }
       else if(http.status == 400) {
         alert("Conteúdo não pode ser nulo! Delete o post caso precise!")

@@ -11,7 +11,7 @@ function postarInfo(fileName){
     let url = `https://burnhop-backend.herokuapp.com/users/update/${id}`
   
     let dados = {
-        "data_nasc": data.split("T")[0],
+        "dataNasc": data.split("T")[0],
         "email": email,
         "name": nome,
         "username": nome

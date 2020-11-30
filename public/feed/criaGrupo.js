@@ -2,6 +2,7 @@ var login = Cookies.get('login');
 
 function criarGrupo(){
   let nomeGrupo = document.getElementById('nomeGrupo').value
+  let descricaoGrupo = document.getElementById('descriacaoNovoGrupo').value
   localStorage.setItem("nomeGrupo",nomeGrupo)
   let id = Cookies.get('id')
 
@@ -10,6 +11,7 @@ function criarGrupo(){
 
   let dados = {
       "admin": id,
+      "description": descricaoGrupo,
       "name": nomeGrupo
     }
 
