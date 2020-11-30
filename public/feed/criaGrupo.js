@@ -20,13 +20,16 @@ function criarGrupo(){
     http.setRequestHeader('Access-Control-Allow-Origin', '*')
     http.onload = function(){
       console.log(http.responseText)
-      if(http.readyState == 4 && http.status == 200) {
+      if(http.readyState == 4 && http.status == 200 && descricaoGrupo != null) {
         console.log("sucesso!");
         setTimeout(1000)
         window.location = "../group/group.html"
       }
       else if(http.status == 409) {
         alert("Já existe um grupo com este nome! Tente outro")
+      }
+      else if(descricaoGrupo != null){
+        alert("voce precisa preencher o nome do grupo e a sua descrição!")
       }
       else{
         console.log("Erro!")

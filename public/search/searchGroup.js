@@ -68,7 +68,9 @@ searchBar.addEventListener('keyup', (e) => {
 
     const filteredCharacters = hpCharacters.filter((character) => {
         return (
-            character.name.toLowerCase().includes(searchString)
+            character.name.toLowerCase().includes(searchString) ||
+            character.admin.name.toLowerCase().includes(searchString) ||
+            character.description.toLowerCase().includes(searchString)
         );
     });
     displayCharacters(filteredCharacters);
@@ -91,6 +93,8 @@ const displayCharacters = (characters) => {
             <li class="character">
                 <h2>${character.name}</h2>
                 <button onClick ="recoverGroupId()" class="btn btn-success" data-tracker="${character.id}">Entrar</button>
+                <h8 class ="font-italic mt-2">ADM: ${character.admin.name}</h8>
+                <p class ="mt-2">Descrição: ${character.description}</p>
             </li>
         `;
         })

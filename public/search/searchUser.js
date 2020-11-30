@@ -41,6 +41,7 @@ const displayCharacters = (characters) => {
             <li class="character">
                 <h2><a onClick ="saveProfileEmail()" data-tracker="${character.login.email}" href= "../search/profileView.html">${character.name}</a></h2>
                 <p class = "mt-2">Data Nascimento: ${character.dataNasc}</p>
+                <h5 class = "mt-2">Email: ${character.login.email}</h5>
                 <img src="${character.imagePath}"></img>
             </li>
         `;

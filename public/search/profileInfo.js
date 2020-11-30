@@ -38,7 +38,7 @@ function logout(){
 
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('image', data.imagePath,{ path: '', domain: 'localhost' });
+    Cookies.set('image', data.imagePath,{ path: '', domain: 'https://burnhop.herokuapp.com' });
 
 },'json');
 

@@ -70,6 +70,12 @@ function editarNomeGrupo(){
   let descricao = document.getElementById('descricao').value
   let url = `https://burnhop-backend.herokuapp.com//groups/update/${idGrupo}`
 
+  if(conteudo == undefined){
+    conteudo = ""
+  }
+  if(descricao == undefined){
+    descricao = ""
+  }
   let dados = {
     "description": descricao,
     "name": conteudo
@@ -83,7 +89,7 @@ function editarNomeGrupo(){
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
         alert("grupo atualizado com sucesso")
-        localStorage.setItem('nomeGrupo', conteudo)
+        if(conteudo != ""){localStorage.setItem('nomeGrupo', conteudo)}
         location.reload()
       }
       else if(http.status == 400) {

@@ -1,6 +1,6 @@
 const posts = document.getElementById('posts');
 
-var theUrl = "https://burnhop-backend.herokuapp.com/posts/get-all"
+var theUrl = "https://burnhop-backend.herokuapp.com/posts/get-feed"
 
 
 var data = $.get(theUrl,function(data){
@@ -33,7 +33,7 @@ const exibirPublicacoes = (publicacoes) => {
       <div class="container mt-3 publicacao bg-dark">
         <div class="row">
           <div class="col-md-1 ml-3 mr-1 mt-3 mb-3">
-            <img src= "../images/avatar.png" class = "rounded-circle " width="50px">
+            <img src=${post.foto} class = "rounded-circle " width="50px">
           </div>
           <div class="col-md-6 mt-3 d-flex align-items-center text-white">
             <ul class="info">

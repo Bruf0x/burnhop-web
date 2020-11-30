@@ -29,7 +29,7 @@ function postar(mensagem, email){
         if(http.readyState == 4 && http.status == 200) {
         alert("Conteúdo postado com sucesso");
         reload_js();
-        //document.location.reload(true);
+        document.location.reload(true);
         }
         else{
         alert("Erro ao postar conteudo")
