@@ -5,12 +5,24 @@ console.log(id)
 function exibirNomeGrupo(nomeGrupo){
   const htmlNome = `${nomeGrupo}`
   nome.innerHTML = htmlNome
+
 }
+
+function exibirDescricao(descricao){
+  const htmlDescricao = `${descricao}`
+  descricaoGrupo.innerHTML = htmlDescricao
+
+}
+
+
 
 $.get(`https://burnhop-backend.herokuapp.com/groups/name/${nomeGrupo}`,function(data){
   exibirNomeGrupo(data.name);
+  exibirDescricao(data.description)
   console.log(data.name);
+  console.log(data.description)
   let idAdminGrupo = data.admin.id
+  localStorage.setItem("idGrupo",data.id)
   localStorage.setItem("idAdminGrupo", idAdminGrupo);
 },'json');
 
@@ -40,7 +52,7 @@ function deletarGrupo(){
         console.log("sucesso!");
         alert("Grupo deletado com sucesso!")
         setTimeout(1000)
-        window.location = "../"
+        window.location = "../feed/feed.html"
       }
       else{
         console.log("Erro!")
@@ -49,15 +61,24 @@ function deletarGrupo(){
     http.send();
 }
 
+
 /*Função editar nome Grupo*/
 function editarNomeGrupo(){
   let http = new XMLHttpRequest()
   let idGrupo = localStorage.getItem('idGrupo');
   let conteudo = document.getElementById('nomeGrupo').value
-  let url = `https://burnhop-backend.herokuapp.com/posts/update/${idPost}`
+  let descricao = document.getElementById('descricao').value
+  let url = `https://burnhop-backend.herokuapp.com//groups/update/${idGrupo}`
 
+  if(conteudo == undefined){
+    conteudo = ""
+  }
+  if(descricao == undefined){
+    descricao = ""
+  }
   let dados = {
-    "content": conteudo
+    "description": descricao,
+    "name": conteudo
     }
 
     http.open('PUT', url, true)
@@ -67,11 +88,12 @@ function editarNomeGrupo(){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
-        alert("Post atualizado com sucesso")
+        alert("grupo atualizado com sucesso")
+        if(conteudo != ""){localStorage.setItem('nomeGrupo', conteudo)}
         location.reload()
       }
       else if(http.status == 400) {
-        alert("Conteúdo não pode ser nulo! Delete o post caso precise!")
+        alert("Conteúdo não pode ser nulo! Delete o grupo caso precise!")
       }
       else{
         console.log("Erro!")

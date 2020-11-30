@@ -72,6 +72,7 @@
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap " id="nome"></h4> <!--RECUPERAR NOME DO Grupo AQUI -->
+                    <p class="pt-sm-2 pb-1 mb-0 text-nowrap " id="descricaoGrupo"></p>
                     <div class="mt-2">
                     </div>
                   </div>
@@ -131,6 +132,8 @@
         <div class="form-group">
           <label>Nome do Grupo</label>
           <input class="form-control" type="text" name="nomeGrupo" placeholder="Nome do grupo aqui" id="nomeGrupo" >
+          <label>Descrição do grupo</label>
+          <input class="form-control" type="text" name="descricao" placeholder="descricao" id="descricao" >
           <button type="button" onclick="editarNomeGrupo()"class="btn btn-success mt-4"name="button">Salvar</button>
           <div class="d-flex justify-content-end">
             <button type="button" onclick="deletarGrupo()" class="btn btn-danger mt-4 mr-auto"name="button">Deletar Grupo</button>

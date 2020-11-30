@@ -9,9 +9,20 @@ function postarInfo(fileName){
     //var id = 21
     let http = new XMLHttpRequest()
     let url = `https://burnhop-backend.herokuapp.com/users/update/${id}`
-  
+
+    if(nome == undefined){
+      nome = ""
+    }
+    if(data == undefined){
+      data = ""
+    }
+    if(email == undefined){
+      email = ""
+    }
+
+    
     let dados = {
-        "data_nasc": data.split("T")[0],
+        "dataNasc": data.split("T")[0],
         "email": email,
         "name": nome,
         "username": nome
@@ -23,7 +34,13 @@ function postarInfo(fileName){
       http.onload = function(){
         console.log(http.responseText)
         if(http.readyState == 4 && http.status == 200) {
+          if(email != ""){  
+            Cookies.remove('login')
+            Cookies.set('login', email,{domain: 'https://burnhop.herokuapp.com' });
+          }
           console.log("sucesso!");
+          setTimeout(2000)
+          location.reload()
         }
         else{
           console.log("Erro!")
@@ -34,6 +51,11 @@ function postarInfo(fileName){
 }
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('id', data.id,{ path: '', domain: 'localhost' });
+    Cookies.set('id', data.id,{ path: '', domain: 'https://burnhop.herokuapp.com' });
 
 },'json');
+
+
+setTimeout(function(){
+  console.log("Ready")
+}, 1000);

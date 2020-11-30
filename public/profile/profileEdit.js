@@ -93,6 +93,9 @@ function postarImagem(fileName){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("Sucesso ao enviar imagem")
+        setTimeout(2000)
+        location.reload()
+        
       }
       else{
         console.log("Erro ao enviar imagem")
@@ -100,3 +103,8 @@ function postarImagem(fileName){
     }  
     http.send();
 };
+
+
+setTimeout(function(){
+  console.log("Ready")
+}, 2000);

@@ -1,6 +1,7 @@
 function postarConteudo(){
     let mensagem = document.getElementById('message').value
-    let email = localStorage.getItem("login");
+    //let email = localStorage.getItem("login");
+    var email = Cookies.get('login');
     if(mensagem != null){
         console.log(mensagem)
         postar(mensagem, email)
@@ -11,10 +12,12 @@ function postarConteudo(){
   
 function postar(mensagem, email){
     let http = new XMLHttpRequest()
+    let numeroGrupo = -1
     let url = 'https://burnhop-backend.herokuapp.com/posts/'
     let dados = {
+        "groupId": numeroGrupo,
         "texto": mensagem,
-        "user_email": email
+        "userEmail": email
     }
     
 
@@ -25,6 +28,7 @@ function postar(mensagem, email){
         console.log(http.responseText)
         if(http.readyState == 4 && http.status == 200) {
         alert("Conteúdo postado com sucesso");
+        reload_js();
         document.location.reload(true);
         }
         else{
@@ -33,4 +37,11 @@ function postar(mensagem, email){
     }
 
 http.send(JSON.stringify(dados));
+}
+
+
+function reload_js() {
+    src = 'renderposts.js'
+    $('script[src="' + src + '"]').remove();
+    $('<script>').attr('src', src).appendTo('head');
 }

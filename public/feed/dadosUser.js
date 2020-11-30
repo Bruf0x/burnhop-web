@@ -13,12 +13,12 @@ $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data
 },'json');
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('id', data.id,{ domain: 'localhost' });
+    Cookies.set('id', data.id,{ domain: 'https://burnhop.herokuapp.com' });
 
 },'json');
 
 $.get(`https://burnhop-backend.herokuapp.com/users/email/${login}`,function(data){
-    Cookies.set('image', data.image_path,{ path: '', domain: 'localhost' });
+    Cookies.set('image', data.imagePath,{ path: '', domain: 'https://burnhop.herokuapp.com' });
 
 },'json');
 
