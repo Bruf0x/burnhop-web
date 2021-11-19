@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="lives.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/a4ed003e1a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BurnHop</title>
+  <link rel="icon" href="/static/images/icon.png">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="lives.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+<body class="bg-secondary">
+  <!---area da top bar e search bar-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <a href="#" class="navbar-brand">
+        <a href="feed.html"><img src="../images/logo.png" width="142px"></a>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="nav-principal">
+      <form class= "mr-auto ml-auto mt-1 mb-1">
+      </form>
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link text-light" href="https://www.twitch.tv/directory/game/Music?tl=5f0c32b8-2bdf-47e2-ae63-9abc2fe61776">Lives</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-light" href="../search/userSearch.html">Usuários</a>
+          </li>
+          <li class="nav-item d-flex">
+            <a href="../profile/profileEdit.html" class="nav-link text-light" id = "nome"></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../profile/profileEdit.html" class="nav-link d-online ml-3" id ="foto"></a>
+          </li>
+       </ul>
+      </div>
+  </nav>
+  <!---Area de postagem de conteudos-->
+  <section>
+    <div class="">
+      <div class = "container-fluid">
+        <div class="row">
+
+          <div class ="col-md-8 verde">
+            <div class="container d-flex justify-content-center mt-4 publicacao bg-dark rounded">
+              <div id="page-wrapper">
+                <ul id="messages"></ul>
+                  <iframe width="800" height="600 " src="https://www.youtube.com/embed/9dcEKHxUp9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                  <button type="submit" class="msger-send-btn bg-primary float-right rounded">Inscrever-se</button>
+                  <a class="text-light float-left">Vote no Ganhador:</a>
+                  <div class="row">
+                    <button type="submit" class="msger-send-btn bg-danger float-right rounded">Competidor 1</button>
+                    <button type="submit" class="msger-send-btn bg-danger float-right rounded">Competidor 2</button>
+
+                  </div>
+                  
+
+                </div>
+              
+            </div>
+          </div>
+ <!---Area do chat-->
+          <div class ="col-md-4">
+            <div class="container d-flex justify-content-center mt-4 publicacao bg-dark"></div>
+            <section class="msger">
+              <header class="msger-header bg-dark">
+                <div class="msger-header-title bg-dark">
+                  <i class="fas fa-comment-alt"></i> Chat
+                </div>
+                <div class="msger-header-options">
+                  <span><i class="fas fa-cog"></i></span>
+                </div>
+              </header>
+            
+              <main class="msger-chat">
+                <div class="msg left-msg">
+                  <div
+                   class="msg-img"
+                   style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+                  ></div>
+            
+                  <div class="msg-bubble">
+                    <div class="msg-info">
+                      <div class="msg-info-name">User 1</div>
+                      <div class="msg-info-time">12:45</div>
+                    </div>
+            
+                    <div class="msg-text">
+                      Eae galera, muito top essa live! 😄
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="msg left-msg">
+                  <div
+                   class="msg-img"
+                   style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
+                  ></div>
+            
+                  <div class="msg-bubble">
+                    <div class="msg-info">
+                      <div class="msg-info-name">User 2</div>
+                      <div class="msg-info-time">12:46</div>
+                    </div>
+            
+                    <div class="msg-text">
+                      Caraca, que pedrada esse som!
+                    </div>
+                  </div>
+                </div>
+              </main>
+            
+              <form class="msger-inputarea">
+                <input type="text" class="msger-input" placeholder="Manda uma mensagem para seu streamer...">
+                <button type="submit" class="msger-send-btn">Enviar</button>
+              </form>
+            </section>
+              </div>
+            </div>
+          </script>
+
+
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class ="col-md-3">
+
+          </div>
+
+          <div class ="col-md-12">
+            <div class="postagem feed" id="posts">
+
+            </div>
+          </div>
+
+
+
+          <div class ="col-md-3">
+
+          </div>
+        </div>
+        </div>
+
+      </div>
+</div>
+  </section>
+
+<!--Modal-->
+
+
+<!--Modal meus Grupos-->
+
+<!--Area do rodapé-->
+<footer>
+</footer>
+<!--JS-->
+<script src="criaGrupo.js"></script>
+<script src="dadosUser.js"></script>
+<script src="post.js"></script>
+<script src="renderposts.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

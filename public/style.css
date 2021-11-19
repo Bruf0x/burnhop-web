@@ -1,12 +1,12 @@
 body{
   background-color:#565050;
-  font-family: Comic Sans MS, cursive, sans-serif !important;
+  font: 600 18px Nunito, sans-serif;
   height: 100vh;
 }
 
 #logo {
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
 }
 
 .botao-cadastro{
@@ -33,8 +33,60 @@ h2 {
   color: #cccccc;
 }
 
+.imagem-login{
+  width: 60%;
+  height:60%;
+}
 
+.texto-login{
+  font-size: 40px;
+  color: #DF9F45;
+}
+.texto-footer{
+  color: #DF9F45;
+}
 
+:root {
+  --mainColor: #d65128;
+}
+
+.texto-login:hover{
+  color: transparent;
+  -webkit-text-stroke: 2px var(--mainColor);
+}
+
+@supports not(-webkit-text-stroke: 2px red) {
+  texto-login:hover {
+    text-shadow:
+      3px 3px 0 var(--mainColor),
+      -1px -1px 0 var(--mainColor),
+      1px -1px 0 var(--mainColor),
+      -1px 1px 0 var(--mainColor),
+      1px 1px 0 var(--mainColor);
+  }
+}
+
+.texto-footer:hover{
+  color: transparent;
+  -webkit-text-stroke: 0.5px var(--mainColor);
+}
+
+@supports not(-webkit-text-stroke:  0.5px red) {
+  texto-footer:hover {
+    text-shadow:
+       0.5px  0.5px 0 var(--mainColor),
+      - 0.5px - 0.5px 0 var(--mainColor),
+       0.5px - 0.5px 0 var(--mainColor),
+      - 0.5px  0.5px 0 var(--mainColor),
+       0.5px  0.5px 0 var(--mainColor);
+  }
+}
+
+.bg-sobre{
+  background-color: #565050;
+  color: #fff;
+  border-radius: 20px;
+}
 /* STRUCTURE */
 
 .wrapper {
