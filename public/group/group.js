@@ -50,7 +50,7 @@ function deletarGrupo(){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
-        //alert("Grupo deletado com sucesso!")
+        alert("Grupo deletado com sucesso!")
         setTimeout(1000)
         window.location = "../feed/feed.html"
       }
@@ -88,12 +88,12 @@ function editarNomeGrupo(){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
-        //alert("grupo atualizado com sucesso")
+        alert("grupo atualizado com sucesso")
         if(conteudo != ""){localStorage.setItem('nomeGrupo', conteudo)}
         location.reload()
       }
       else if(http.status == 400) {
-        //alert("Conteúdo não pode ser nulo! Delete o grupo caso precise!")
+        alert("Conteúdo não pode ser nulo! Delete o grupo caso precise!")
       }
       else{
         console.log("Erro!")

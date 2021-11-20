@@ -61,9 +61,9 @@ function postImage(){
 
   promise.then(
     function() {
-      //alert("Successfully uploaded photo.");
+      alert("Successfully uploaded photo.");
       postarImagem(fileName)
-      //enviarBack(fileName)
+      enviarBack(fileName)
     },
     function(err) {
       return alert("There was an error uploading your photo: ", err.message);

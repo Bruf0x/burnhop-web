@@ -6,7 +6,7 @@ function postarConteudo(){
         postar(mensagem, email)
     }
     else
-        //alert("É necessario escrever uma mensagem para postar!")
+        alert("É necessario escrever uma mensagem para postar!")
   }
   
 function postar(mensagem, email){
@@ -26,11 +26,11 @@ function postar(mensagem, email){
     http.onload = function(){
         console.log(http.responseText)
         if(http.readyState == 4 && http.status == 200) {
-        //alert("Conteúdo postado com sucesso");
+            alert("Conteúdo postado com sucesso");
         document.location.reload(true);
         }
         else{
-        //alert("Erro ao postar conteudo")
+            alert("Erro ao postar conteudo")
         }
     }
 

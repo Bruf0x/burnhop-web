@@ -7,7 +7,7 @@ function registerUser(){
   let confirmacao = document.getElementById('confirm').value
 
   if (validaSenha()){
-    //alert("As senha precisam ser iguais, por favor verifique!")
+    alert("As senha precisam ser iguais, por favor verifique!")
   }
   else{
     Cadastro(nome, email, data, senha)
@@ -33,12 +33,12 @@ function Cadastro(nome, email, data, senha){
   http.onload = function(){
     console.log(http.responseText)
     if(http.readyState == 4 && http.status == 200) {
-      //alert("Cadastro realizado com sucesso!");
+      alert("Cadastro realizado com sucesso!");
       setTimeout(1000)
       window.location = ('/');
     }
     else{
-      //alert("Erro ao cadastrar, por favor verifique seus dados!")
+      alert("Erro ao cadastrar, por favor verifique seus dados!")
     }
   }
 
@@ -75,7 +75,7 @@ document.getElementById("email").innerHTML="E-mail válido"
 }
 else{
 document.getElementById("email").innerHTML="<font color='red'>E-mail inválido </font>"
-//alert("E-mail invalido")
+  alert("E-mail invalido")
 }
 }
 

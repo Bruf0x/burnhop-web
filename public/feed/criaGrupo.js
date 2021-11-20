@@ -26,10 +26,10 @@ function criarGrupo(){
         window.location = "../group/group.html"
       }
       else if(http.status == 409) {
-        //alert("Já existe um grupo com este nome! Tente outro")
+        alert("Já existe um grupo com este nome! Tente outro")
       }
       else if(descricaoGrupo != null){
-        //alert("voce precisa preencher o nome do grupo e a sua descrição!")
+        alert("voce precisa preencher o nome do grupo e a sua descrição!")
       }
       else{
         console.log("Erro!")

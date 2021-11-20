@@ -23,7 +23,7 @@ function userLogin(){
         window.location = "/static/feed/feed.html";
       }
       else{
-        //alert("Usuário ou senha incorreto!")
+        alert("Usuário ou senha incorreto!")
       }
     }
     console.log(login,senha)

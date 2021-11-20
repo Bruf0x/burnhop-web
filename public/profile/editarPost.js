@@ -26,11 +26,11 @@ function editarConteudoPost(){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
-        //alert("Post atualizado com sucesso")
+        alert("Post atualizado com sucesso")
         $(`#${idPost}`).html(conteudo)
       }
       else if(http.status == 400) {
-        //alert("Conteúdo não pode ser nulo! Delete o post caso precise!")
+        alert("Conteúdo não pode ser nulo! Delete o post caso precise!")
       }
       else{
         console.log("Erro!")
@@ -53,11 +53,11 @@ function deletarMensagem(){
       console.log(http.responseText)
       if(http.readyState == 4 && http.status == 200) {
         console.log("sucesso!");
-        //alert("Deletado com sucesso!")
+        alert("Deletado com sucesso!")
         location.reload()
       }
       else if(http.status == 400) {
-        //alert("Conteúdo não pode ser nulo! Delete o post caso precise!")
+        alert("Conteúdo não pode ser nulo! Delete o post caso precise!")
       }
       else{
         console.log("Erro!")
